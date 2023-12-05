@@ -1,0 +1,1553 @@
+@font-face {
+    font-family: "FS Lola";
+    src: url('http://localhost/bank-muamalat/public/font/FS-Lola-Regular.ttf') format('truetype');
+}
+
+* {
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #121212;
+}
+
+h2, h3, h4, p {
+    margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* NAVBAR */
+
+nav {
+    position: fixed;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 24px 80px;
+    box-shadow: 0px 4px 14px 0px rgba(18, 18, 18, 0.12);
+    z-index: 1000;
+}
+
+.nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-icon {
+    display: flex;
+    gap: 16px;
+}
+
+.nav-icon .iconify {
+    color: #4F0B78;
+    width: 24px;
+    height: 24px;
+}
+
+.search-bar {
+    position: relative;
+    height: fit-content;
+    width: 55%;
+}
+
+.search-bar .iconify {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: #9C9C9C;
+}
+
+input[type="search"] {
+    background-color: #EFEFEF;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 12px;
+    padding-left: 38px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 4px;
+}
+
+input[type="search"]::placeholder {
+    color: #9C9C9C;
+}
+
+.language-button-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-button {
+    padding: 12px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    background-color: #FFFFFF;
+    color: #4F0B78;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.language-button.active {
+    color: #FFFFFF;
+    background-color: #4F0B78;
+}
+
+.nav-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-bottom .logo {
+    width: 198px;
+    height: 22px;
+}
+
+.nav-bottom ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 8px 0;
+}
+
+.nav-bottom ul li {
+    list-style: none;
+    width: 102px;
+    text-align: center;
+    color: #121212;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "FS Lola";
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    min-width: 140px;
+    box-shadow: 0px 4px 14px 0px rgba(18, 18, 18, 0.12);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 24px;
+    border-radius: 6px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #4F0B78;
+    color: #FFFFFF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.login-button {
+    padding: 12px 24px 10px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #4F0B78;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 6px;
+}
+
+.login-button .iconify {
+    width: 18px;
+    height: 18px;
+    color: #FFFFFF;
+}
+
+/* HERO / CAROUSEL */
+
+.hero {
+    padding-top: 162px;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    aspect-ratio: 1440/518;
+}
+
+/* FORM PENGAJUAN KPR */
+
+.title-page {
+    padding-top: 162px;
+}
+
+.title-page h3 {
+    width: 100%;
+    background-color: #4F0B78;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px;
+    font-family: "FS Lola";
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.form-wrapper {
+    margin-top: 56px;
+    margin-bottom: 149px;
+    display: grid;
+    justify-content: center;
+    gap: 26px;
+}
+
+.form-wrapper .form-title-wrapper {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 44px;
+}
+
+.form-wrapper .form-title-wrapper h3 {
+    text-align: center;
+    color: #4F0B78;
+    font-family: "FS Lola";
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.form-wrapper .form-title-wrapper .bullets-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: fit-content;
+}
+
+.form-wrapper .bullets-line {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 4px;
+    background-color: #E2D6E9;
+    z-index: 0;
+}
+
+.bullets-line .progress-line-active {
+    height: 100%;
+    background-color: #4F0B78;
+}
+
+.form-wrapper .bullets {
+    position: relative;
+    padding: 10px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E2D6E9;
+    color: #FFFFFF;
+    border-radius: 40px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.20);
+}
+
+.form-wrapper .bullets.active {
+    background-color: #4F0B78;
+    box-shadow: none;
+}
+
+.form-wrapper .bullets .iconify {
+    width: 24px;
+    height: 24px;
+}
+
+.form-wrapper .bullets-info {
+    position: absolute;
+    color: #121212;
+    text-align: center;
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.data-pengajuan .data-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.div-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    margin-left: 15px;
+}
+
+label{
+    color: var(--primary-p-006, #4F0B78);
+    text-align: center;
+    font-family: "FS Lola";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.select-form select{
+    display: flex;
+    width: 581px;
+    height: 40px;
+    padding: 5px 245px 5px 14px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 286px;
+    border-radius: 6px;
+    border: 1px solid #CAC5CD;
+    
+    font-family: "FS Lola";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    background-image: url('http://localhost/bank-muamalat/public/img/icon/arrow-down-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 16px);
+    transition: all 150ms ease;
+}
+
+.select{
+    position: relative;
+}
+
+.select select:required:invalid{
+    color: #CAC5CD;
+}
+
+.select select option{
+    color: #223254;
+}
+
+.input-text input{
+    display: flex;
+    width: 581px;
+    height: 40px;
+    padding: 5px 245px 5px 14px;
+    align-items: center;
+
+    font-family: "FS Lola";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 6px;
+    border: 1px solid #CAC5CD;
+}
+
+.input-text input::placeholder{
+   color: #CAC5CD;
+}
+
+.inputs input, .input-biaya input{
+    display: flex;
+    width: 581px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1px solid #CAC5CD;
+    padding: 5px 14px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: "FS Lola";
+}
+
+.input-biaya input[id="harga-properti"], .input-biaya input[id="uang-muka"], 
+.input-biaya input[id="nilai-pengajuan"], .input-biaya input[id="hasil"], 
+.input-biaya input[id="butuh"], .input-biaya input[id="biaya-lain"] {
+    padding-left: 44px;
+}
+
+.input-biaya{
+    position: relative;
+}
+
+.inputs{
+    position: relative;
+}
+
+.rp {
+	padding-left: 14px;
+	font-family: "FS Lola";
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+    background-color: #4f0b78;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.input-biaya .rp{
+    position: absolute;
+    left: 0;
+    top: 41px;
+    padding: 9px 8px;
+	transition: 0.3s;
+    border-radius: 6px 0px 0px 6px;
+}
+
+.input-biaya .inputIcon .rp {
+	background-color: #4f0b78;
+	color: #fff;
+	border-radius: 4px 0 0 4px;
+	height: 36px;
+}
+
+.inputs .tahun{
+    position: absolute;
+    top: 41px;
+    padding: 9px 8px;
+	transition: 0.3s;
+    border-radius: 0px 6px 6px 0px;
+    margin-left: 512px;
+}
+
+.inputs .inputIcons .tahun {
+	background-color: #4f0b78;
+	color: #fff;
+	border-radius: 4px 0 0 4px;
+	height: 36px;
+}
+
+.tahun {
+	padding-left: 14px;
+	font-family: "FS Lola";
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+    background-color: #4f0b78;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.data-pribadi .data-wrapper {
+    gap: 34px;
+    align-items: flex-start;
+    width: 100%;
+    display: flex;
+    align-content: stretch;
+}
+
+.frame-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    padding-top: 19px;
+}
+.frame-right-one {
+	display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 81px;
+}
+.frame-left-one {
+	display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 81px;
+}
+.frame-left{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    /* align-content: center; */
+}
+.div-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+.div-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+.div-right-two{
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.input-lahir select{
+    display: flex;
+	padding: 4px 0px 4px 42px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 6px;
+	border: 1px solid #cac5cd;
+	height: 36px;
+    font-size: 20px;
+    font-family: "FS Lola";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+}
+.slct-short{
+    position: relative;
+}
+
+.slct-short select:required:invalid{
+    color: #CAC5CD;
+}
+.slct-short select option{
+    color: #223254;
+}
+.inputWithIconn select{
+    padding-left: 50px;
+    width: 200px;
+    height: 40px;
+}
+.inputWithIconn input {
+	padding-left: 50px;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    font-size: 20px;
+	justify-content: center;
+	border-radius: 6px;
+	border: 1px solid #cac5cd;
+	height: 40px;
+}
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+	display: none;
+	-webkit-appearance: none;
+}
+.text-input input{
+    display: flex;
+    width: 481px;
+    height: 40px;
+    padding: 5px 100px 5px 14px;
+    align-items: center;
+    
+    /* text-align: center; */
+    font-family: "FS Lola";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 6px;
+    border: 1px solid #CAC5CD;
+}
+.div-left select{
+    display: flex;
+    width: 481px;
+    height: 40px;
+    padding: 5px 245px 5px 14px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 286px;
+    border-radius: 6px;
+    border: 1px solid #CAC5CD;
+    
+    font-family: "FS Lola";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    background-image: url('../image/arrow-down-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 16px);
+    transition: all 150ms ease;
+}
+.div-right-two select{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    padding: 0px 14px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 286px;
+    border-radius: 6px;
+    border: 1px solid #CAC5CD;
+    
+    font-family: "FS Lola";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    background-image: url('../image/arrow-down-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: calc(100% - 16px);
+    transition: all 150ms ease;
+}
+.input-short input{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 14px;
+    gap: 286px;
+    border-radius: 6px;
+    border: 1px solid #CAC5CD;
+    font-family: "FS Lola";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.inputWithIcon {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.inputWithIconn {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.inputWithIcons input[type='text'] {
+	padding-right: 70px;
+}
+.inputWithIcon {
+	position: relative;
+}
+.inputWithIconn {
+	position: relative;
+}
+.inputWithIcon .side {
+	position: absolute;
+	left: 0;
+	top: 30px;
+	padding: 9px 8px;
+	color: #aaa;
+	transition: 0.3s;
+}
+.inputWithIconn .sides {
+	position: absolute;
+	left: 0;
+	top: 30px;
+	padding: 9px 8px;
+	color: #aaa;
+	transition: 0.3s;
+}
+.inputWithIcon.inputIconBg .side {
+	background-color: #4f0b78;
+	color: #fff;
+	border-radius: 4px 0 0 4px;
+	height: 35px;
+}
+.inputWithIconn.inputIconBg .sides {
+	background-color: #4f0b78;
+	color: #fff;
+	border-radius: 4px 0 0 4px;
+	height: 40px;
+}
+.side {
+	color: #4f0b78;
+	padding-left: 14px;
+	text-align: left;
+	font-family: "FS Lola";
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.sides {
+	color: #4f0b78;
+	padding-left: 14px;
+    display: flex;
+    align-items: center;
+	text-align: left;
+	font-family: "FS Lola";
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.form-wrapper .upload-document, .form-wrapper .data-pengajuan, .form-wrapper .data-pribadi,
+.form-wrapper .data-pekerjaan {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.form-wrapper .upload-document .file-upload-button {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-wrapper .upload-document .file-upload-button label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    border: solid 1px #CAC5CD;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.upload-document .file-upload-button .file-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.upload-document .file-content .file-icon {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #4F0B78;
+    color: #FFFFFF;
+    width: fit-content;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-document .file-content .file-icon .iconify {
+    width: 60px;
+    height: 60px;
+}
+
+.upload-document .file-content .file-desc {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.upload-document .file-content .file-desc p {
+    font-size: 20px;
+    font-family: "FS Lola";
+    font-weight: 400;
+}
+
+.file-content .file-desc .requirement {
+    max-width: 260px;
+}
+
+.file-content .file-desc .title {
+    max-width: 320px;
+    font-size: 24px;
+}
+
+.upload-document .file-upload-button label>.iconify {
+    width: 30px;
+    height: 30px;
+    color: #CAC5CD;
+    margin: 0;
+}
+
+.upload-document .button-wrapper, .data-pengajuan .button-wrapper, 
+.data-pribadi .button-wrapper, .data-pekerjaan .button-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.upload-document .button-wrapper .next-btn, .upload-document .button-wrapper .reset-btn,
+.data-pengajuan .button-wrapper .next-btn, .data-pengajuan .button-wrapper .reset-btn,
+.data-pribadi .button-wrapper .next-btn, .data-pribadi .button-wrapper .reset-btn, 
+.data-pekerjaan .button-wrapper .next-btn, .data-pekerjaan .button-wrapper .reset-btn {
+    width: 30%;
+    max-width: 180px;
+    border: solid 1px #4F0B78;
+    border-radius: 6px;
+    text-align: center;
+    font-family: "FS Lola";
+    font-size: 24px;
+    font-weight: 400;
+    padding: 8px;
+}
+
+.upload-document .button-wrapper .next-btn, .data-pengajuan .button-wrapper .next-btn,
+.data-pribadi .button-wrapper .next-btn, .data-pekerjaan .button-wrapper .next-btn {
+    background-color: #4F0B78;
+    color: #FFFFFF;
+}
+
+.upload-document .button-wrapper .reset-btn, .data-pengajuan .button-wrapper .reset-btn,
+.data-pribadi .button-wrapper .reset-btn, .data-pekerjaan .button-wrapper .reset-btn {
+    background-color: #FFFFFF;
+    color: #4F0B78;
+}
+
+.form-wrapper .resume {
+    margin: 64px 0;
+}
+
+.form-wrapper .resume h4 {
+    text-align: center;
+    color: #500878;
+    font-family: "FS Lola";
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.form-wrapper .resume .resume-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 64px;
+    width: fit-content;
+    padding: 48px 95px 102px 95px;
+    border: solid 1px #500878;
+    border-radius: 4px;
+}
+
+.form-wrapper .resume .resume-grid {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.resume .resume-grid .resume-col {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: fit-content;
+}
+
+.resume-grid .resume-col .heading-row, .resume-grid .resume-col .nominal {
+    font-family: "FS Lola";
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.resume-grid .resume-col .nominal {
+    color: #500878;
+}
+
+/* PENGAJUAN KPR */
+
+#pengajuan {
+    padding: 80px;
+}
+  
+#pengajuan h2 {
+    font-family: "FS Lola";
+    font-size: 32px;
+    text-align: center;
+    font-weight: 400;
+}
+  
+#pengajuan h5 {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: 400;
+}
+  
+#pengajuan .container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+  
+#pengajuan .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    height: 100%;
+    box-shadow: 4px 4px 25px 0px rgba(18, 18, 18, 0.04);
+}
+
+#pengajuan .card img {
+    width: 100%;
+    aspect-ratio: 416/282;
+}
+
+#pengajuan .card .content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 24px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+
+#pengajuan .card .judul-card {
+    color: #500878;
+    font-family: "FS Lola";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#pengajuan .card .deskripsi-card {
+    text-align: justify;
+}
+
+#pengajuan .card .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#pengajuan .buttons .button-ajukan {
+    background-color: #500878;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+#pengajuan .buttons .button-lihat-cara {
+    color: #500878;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 2px;
+    border: 1px solid #500878;
+    font-weight: 600;
+}
+
+#pengajuan .buttons .button-selengkapnya {
+    color: #500878;
+    line-height: 23px;
+    text-decoration: none;
+}
+
+#kpr {
+    width: 840px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+#kpr h2 {
+    font-family: "FS Lola";
+    font-size: 26px;
+    color: #500878;
+    margin-bottom: 10px;
+}
+
+#kpr a {
+    background: #84c225;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: "FS Lola";
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#kpr table {
+    border: solid 1px #dddddd;
+    table-layout: auto;
+    margin-top: 50px;
+    border-spacing: 0;
+    line-height: 1.5;
+}
+
+#kpr table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+#kpr table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#kpr table tr {
+    border-bottom: 10px solid transparent;
+}
+
+#kpr table td {
+    padding: 10px;
+}
+
+#kpr table td p,
+#kpr table td ol li,
+#kpr table td ul li {
+    color: #666 !important;
+    font-family: "FS Lola";
+    font-size: 14px;
+    text-align: justify;
+}
+
+#kpr table td ol li,
+#kpr table td ul li {
+    margin-left: -20px;
+}
+
+#multiguna {
+    width: 840px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+#multiguna h2 {
+    font-family: "FS Lola";
+    font-size: 26px;
+    color: #500878;
+    margin-bottom: 10px;
+}
+
+#multiguna a {
+    background: #84c225;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: "FS Lola";
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#multiguna .detail-multiguna {
+    margin-top: 50px;
+}
+
+#multiguna .detail-multiguna p strong,
+#multiguna .detail-multiguna p,
+#multiguna .detail-multiguna ul li,
+#multiguna .detail-multiguna ol li,
+#multiguna .detail-multiguna table td p,
+#multiguna .detail-multiguna table td ul li {
+    color: #666 !important;
+    font-family: "FS Lola";
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+#multiguna .detail-multiguna p strong {
+    font-weight: bold;
+}
+
+#multiguna .detail-multiguna ul li,
+#multiguna .detail-multiguna ol li {
+    margin-left: -23px;
+}
+
+#multiguna table {
+    border: solid 1px #dddddd;
+    table-layout: auto;
+    border-spacing: 0;
+}
+
+#multiguna table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+#multiguna table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+  
+#multiguna table tr {
+    border-bottom: 10px solid transparent;
+}
+
+#multiguna table td {
+    padding: 10px;
+}
+
+#tabel {
+    width: 840px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+#tabel h2 {
+    font-family: "FS Lola";
+    font-size: 26px;
+    color: #500878;
+    margin-bottom: 10px;
+}
+
+#tabel a {
+    background: #84c225;
+    color: #fff;
+    padding: 10px 20px;
+    font-family: "FS Lola";
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#tabel .detail-tabel {
+    margin-top: 20px;
+}
+  
+#tabel .detail-tabel img {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+/* SIMULASI KPR */
+
+.simulasi-kpr {
+    margin: 80px 0;
+}
+
+.simulasi-kpr .panel-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.simulasi-kpr .panel-heading h2 {
+    font-family: "FS Lola";
+    font-size: 32px;
+    text-align: center;
+    font-weight: 400;
+}
+  
+.simulasi-kpr .panel-heading h5 {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.simulasi-kpr .panel-body{
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    padding: 64px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    border-radius: 4px;
+    border: 1px solid #500878;
+}
+
+.simulasi-kpr .panel-page{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.simulasi-kpr .panel-page-pendapatan{
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px 0px 0px 0px;
+    background-color: #500878;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.simulasi-kpr .panel-page-sukubunga{
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #500878;
+    color: #500878;
+    text-decoration: none;
+    font-weight: 600px;
+}
+
+.simulasi-kpr .form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.simulasi-kpr .control-label{
+    font-family: "Myriad Pro";
+    font-size: 16px;
+    font-weight: 400;
+    color: #500878;
+    text-align: left;
+}
+
+.simulasi-kpr select{
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid #C9C9C9;
+    background: #FFF;
+}
+
+.simulasi-kpr .input-group{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+
+.simulasi-kpr .input-group-addon-rp, .simulasi-kpr .input-group-addon-tahun{
+    background-color: #4f0b78;
+	color: #fff;
+	border-radius: 4px 0 0 4px;
+	height: 100%;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.simulasi-kpr .input-group-addon-tahun {
+    border-radius: 0 4px 4px 0;
+}
+
+.simulasi-kpr .input-group input{
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 4px;
+    border: 1px solid #C9C9C9;
+    background: #FFF;
+}
+
+.simulasi-kpr .input-group .input-value-group-bulanan{
+    width: 600px;
+}
+
+.simulasi-kpr .input-group .input-value-group-kredit{
+    width: 573px;
+}
+
+.simulasi-kpr .input-group .input-value-group-cicilan{
+    width: 600px;
+}
+
+.simulasi-kpr .row-button{
+    margin-top: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.simulasi-kpr .row-submit{
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px 0px 0px 0px;
+    border: none;
+    outline: none;
+    background: #500878;
+    color: #FFF;
+    font-weight: 600;
+}
+
+.simulasi-kpr .row-reset{
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #500878;
+    background-color: #FFF;
+    color: #500878;
+    font-weight: 600;
+    outline: none;
+}
+
+.simulasi-kpr .hasil-perhitungan {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.simulasi-kpr .hasil-perhitungan .nilai-hasil-perhitungan{
+    min-height: 174px;
+    width: 632px;
+    flex: 1 0 0;
+    align-self: stretch;  
+    background: #EFEFEF;
+    padding: 9px;
+    color: #000;
+    font-family: "FS Lola";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.5px;
+}
+
+.simulasi-kpr .information-segmen-bisnis{
+    align-items: center;
+}
+
+.simulasi-kpr .segmen-bisnis-title{
+    margin-top: 80px;
+}
+
+.simulasi-kpr .segmen-bisnis-table{
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.simulasi-kpr h4{
+    width: 632px;
+    height: 19px;
+    color: #500878;
+    text-align: left;
+}
+
+.simulasi-kpr .info-percent{
+    color: #a29f9f;
+}
+
+.simulasi-kpr table{
+    width: 650px;
+}
+
+.simulasi-kpr th, td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #500878;
+}
+
+.simulasi-kpr table{
+    border: 2px solid #500878;
+    border-collapse: collapse;
+}
+
+.simulasi-kpr article{
+    text-align: justify;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+	background: #500878;
+	margin: 0;
+}
+
+.footer-item {
+	display: flex;
+	flex-direction: row;
+	gap: 124px;
+    padding: 80px;
+    width: 1280px;
+}
+
+.left-item {
+	width: 305px;
+}
+.left-1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+.left-2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    margin-top: 42px;
+    margin-bottom: 42px;
+}
+.left-3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+.rectangle {
+	display: flex;
+	padding: 8px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 2px;
+	background: #fff;
+	width: 30px;
+	height: 30px;
+}
+
+.alamat {
+	color: #fff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	text-align: left;
+	line-height: 24px; /* 150% */
+}
+
+.medsos {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+}
+
+.head-footer-left {
+	color: #fff;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 24px; /* 120% */
+	text-align: left;
+}
+
+.head-footer-right {
+	color: #fff;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 24px; /* 120% */
+	text-align: left;
+	margin: 0;
+}
+.info {
+	color: #fff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px; /* 150% */
+}
+
+
+.container-rectangle {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+}
+
+.right-item {
+	display: flex;
+	flex-direction: row;
+	gap: 64px;
+}
+
+.ul-footer {
+	display: flex;
+	flex-direction: column;
+	padding: 8px 0px;
+	align-items: flex-start;
+	gap: 8px;
+	list-style: none;
+	text-align: left;
+}
+
+.li-footer {
+	font-family: "FS Lola";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.li-footer a {
+	text-decoration: none;
+	color: #fff;
+}
